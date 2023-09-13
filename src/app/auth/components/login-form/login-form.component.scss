@@ -1,0 +1,44 @@
+@import '/src/app/styles/variables';
+@import '/src/app/styles/mixins';
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-top: 50px;
+
+  .login-card {
+    @include basic-card;
+    padding: 30px;
+
+    .login-form {
+      display: flex;
+
+      .login-field {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+.mr-5 {
+  margin-right: 5px;
+}
+
+.required {
+  color: red;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .login-form {
+    flex-direction: column;
+    align-items: center;
+
+    .login-field {
+      margin-bottom: 10px;
+    }
+  }
+}

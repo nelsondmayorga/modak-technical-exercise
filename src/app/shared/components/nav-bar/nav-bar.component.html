@@ -1,0 +1,15 @@
+<header>
+  <div class="logo-container">
+    <img routerLink="/home" src="./../../../../assets/logo.png" alt="Nelson Mayorga Logo" />
+  </div>
+  <nav *ngIf="authService.isLoggedIn$ | async">
+    <div class="menu-element" routerLink="/home">
+      <img src="./../../../../assets/home.svg" width="16" alt="home" />
+      Home
+    </div>
+    <div class="menu-element" routerLink="/datatable">
+      <img src="./../../../../assets/table.svg" width="16" alt="home" />
+      Datatable
+    </div>
+  </nav>
+</header>

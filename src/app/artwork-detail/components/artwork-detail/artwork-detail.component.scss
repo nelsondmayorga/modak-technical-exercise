@@ -1,0 +1,55 @@
+@import '/src/app/styles/variables';
+@import '/src/app/styles/mixins';
+
+.container {
+  display: flex;
+  margin-top: 50px;
+  .artwork-info {
+    margin-top: 35px;
+    margin-left: 50px;
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    p {
+      text-align: justify;
+      margin-bottom: 22px;
+    }
+    .specifications {
+      display: flex;
+    }
+  }
+}
+
+.card {
+  @include basic-card;
+  overflow: hidden;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 60px;
+  padding: 50px;
+
+  img {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .specifications {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 750px) {
+  h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+}

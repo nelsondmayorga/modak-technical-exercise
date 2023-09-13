@@ -1,0 +1,15 @@
+<div (click)="goToDetail(artwork.id)" class="card" appHoverScale>
+  <div class="card-header">
+    <img [src]="artwork.image_id | imageUrl" [alt]="artwork.title" />
+  </div>
+  <div class="card-body">
+    <h4>{{ artwork.title | limitCharacters }}</h4>
+    <span class="tag">{{ artwork.date_display | limitCharacters : 40 }}</span>
+    <p>{{ artwork.artist_title | author }}</p>
+    <span><strong>Origin</strong>: {{ artwork.place_of_origin }} </span>
+    <span><strong>Type</strong>: {{ artwork.artwork_type_title }} </span>
+  </div>
+  <div>
+    <button class="card-button">Detail</button>
+  </div>
+</div>

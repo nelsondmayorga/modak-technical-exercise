@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="login-card">
+        <form class="login-form" [formGroup]="form" (ngSubmit)="submitData()">
+            <div class="login-field">
+                <input pInputText formControlName="username" class="mr-5" placeholder="Username" type="text">
+                <span *ngIf="usernameField?.touched && usernameField?.invalid" class="required">This field is required</span>
+            </div>
+            <div class="login-field">
+                <input pInputText formControlName="password" class="mr-5" placeholder="Password" type="password">
+                <span *ngIf="passwordField?.touched && passwordField?.invalid" class="required">This field is required</span>
+            </div>
+            <p-button [disabled]="form.invalid" label="Log In" styleClass="p-button-rounded p-button-sm" type="submit"></p-button>
+        </form>
+        <div class="errors" *ngIf="errorMessage">{{ errorMessage }}</div>
+    </div>
+</div>

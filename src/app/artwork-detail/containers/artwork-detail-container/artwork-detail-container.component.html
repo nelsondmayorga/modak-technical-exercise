@@ -1,0 +1,3 @@
+  <ng-container *ngIf="(artwork$ | async)?.data as artwork">
+    <app-artwork-detail [artwork]="artwork"></app-artwork-detail>
+  </ng-container>

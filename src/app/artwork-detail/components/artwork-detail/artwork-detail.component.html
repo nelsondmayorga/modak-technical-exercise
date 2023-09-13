@@ -1,0 +1,30 @@
+    <div class="container card">
+      <div>
+        <h1>{{ artwork.title}}</h1>
+        <img [src]="artwork.image_id | imageUrl"  [alt]="artwork.title">
+      </div>
+      <div class="artwork-info">
+        <p>{{ artwork.medium_display }}</p>
+        <h2>Specifications</h2>
+        <div class="specifications">
+          <div>
+            <ul>
+              <li><strong>Date start:</strong> {{ artwork.date_start }}</li>
+              <li><strong>Date display:</strong> {{ artwork.date_display }}</li>
+              <li><strong>Artist:</strong> {{ artwork.artist_display }}</li>
+              <li><strong>Origin:</strong> {{ artwork.place_of_origin }}</li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li><strong>Dimensions:</strong> {{ artwork.dimensions }}</li>
+              <li><strong>Type:</strong> {{ artwork.artwork_type_title }}</li>
+              <li><strong>Department:</strong> {{ artwork.department_title }}</li>
+              <li><strong>Colorfulness:</strong> {{ artwork.colorfulness }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  

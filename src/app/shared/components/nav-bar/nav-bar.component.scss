@@ -1,0 +1,52 @@
+@import '/src/app/styles/variables';
+
+header {
+  width: 100%;
+}
+
+nav {
+  background-color:  $secondary-color;
+  border-bottom: 1px solid $border-bottom-color;
+  line-height: 45px;
+  padding: 0 30px;
+}
+
+.menu-element {
+  padding: 0 20px;
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.menu-element:hover {
+  background-color: $menu-hover-color;
+}
+
+.logo-container {
+  background-color: $primary-color;
+}
+
+.logo-container img {
+  display: block;
+  margin: 0 auto;
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .logo-container img {
+    width: 300px;
+  }
+  .menu-element {
+    padding: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .logo-container img {
+    width: 300px;
+  }
+  .menu-element {
+    padding: 0;
+  }
+}

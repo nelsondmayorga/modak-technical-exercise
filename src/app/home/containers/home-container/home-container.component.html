@@ -1,0 +1,9 @@
+<app-search-box></app-search-box>
+<ng-container *ngIf="artworks$ | async as artworks">
+  <div class="container">
+    <ng-container *ngFor="let artwork of artworks">
+      <app-artwork-card [artwork]="artwork"></app-artwork-card>
+    </ng-container>
+  </div>
+  <div class="loading" *ngIf="!artworks.length"><span>No data found</span></div>
+</ng-container>
